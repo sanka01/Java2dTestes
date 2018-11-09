@@ -1,14 +1,14 @@
 import java.awt.*;
 
-class Poligono2D extends Java2d {
+class Poligono2D{
 
     /**
      *
      */
     private static final long serialVersionUID = 1L;
 
-    private int pontoXInicial = this.altura/2;
-    private int pontoYInicial = this.largura/2;
+    private int pontoXInicial = 200;
+    private int pontoYInicial = 200;
 
     private int distanciaX = 15 + 30;
     private int distanciaY = 25 + 30;
@@ -54,14 +54,8 @@ class Poligono2D extends Java2d {
     private Polygon face4 = new Polygon(x4, y4, 4);
     private Polygon face5 = new Polygon(x5, y5, 4);
 
-    public Poligono2D(int largura, int altura) {
-        super(largura, altura);
-    }
 
-
-    @Override
-    public void paint(Graphics g) {
-        super.paint(g);
+    public Poligono2D(Graphics g) {
         g.drawPolygon(quadrado);
         g.drawPolygon(face1);
         g.drawPolygon(face2);
